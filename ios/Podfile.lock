@@ -350,7 +350,7 @@ PODS:
     - React-perflogger (= 0.64.1)
   - RNCMaskedView (0.1.11):
     - React
-  - RNDeviceInfo (9.0.2):
+  - RNDeviceInfo (10.0.2):
     - React-Core
   - RNGestureHandler (2.4.2):
     - React-Core
@@ -526,7 +526,7 @@ SPEC CHECKSUMS:
   CocoaAsyncSocket: 065fd1e645c7abab64f7a6a2007a48038fdc6a99
   DoubleConversion: cf9b38bf0b2d048436d9a82ad2abe1404f11e7de
   FBLazyVector: 7b423f9e248eae65987838148c36eec1dbfe0b53
-  FBReactNativeSpec: f23503ca302f05de1fe791c846e2227e7d30f00e
+  FBReactNativeSpec: ff35f48b003dae8aedb7181f1f33b08360ef8cef
   Flipper: d3da1aa199aad94455ae725e9f3aa43f3ec17021
   Flipper-DoubleConversion: 38631e41ef4f9b12861c67d17cb5518d06badc41
   Flipper-Folly: 755929a4f851b2fb2c347d533a23f191b008554c
@@ -565,7 +565,7 @@ SPEC CHECKSUMS:
   React-runtimeexecutor: ff951a0c241bfaefc4940a3f1f1a229e7cb32fa6
   ReactCommon: bedc99ed4dae329c4fcf128d0c31b9115e5365ca
   RNCMaskedView: 0e1bc4bfa8365eba5fbbb71e07fbdc0555249489
-  RNDeviceInfo: 1e3f62b9ec32f7754fac60bd06b8f8a27124e7f0
+  RNDeviceInfo: 0a7c1d2532aa7691f9b9925a27e43af006db4dae
   RNGestureHandler: 61628a2c859172551aa2100d3e73d1e57878392f
   RNScreens: 40a2cb40a02a609938137a1e0acfbf8fc9eebf19
   RNSVG: 302bfc9905bd8122f08966dc2ce2d07b7b52b9f8

@@ -30,7 +30,7 @@ const MyStack = () => {
 
 
     return (
-        <NavigationContainer>
+        <NavigationContainer independent={true}>
             <Stack.Navigator
                 screenOptions={({ navigation }) => ({
                     gestureEnabled: false,

@@ -7,6 +7,7 @@ import AntDesign from 'react-native-vector-icons/AntDesign';
 import Ionicons from 'react-native-vector-icons/Ionicons';
 import MaterialCommunityIcons from 'react-native-vector-icons/MaterialCommunityIcons';
 import { TopTabs } from '../../components/TopTabs';
+import AppointmentsList from '../../screens/AppointmentList';
 import { theme } from '../Common';
 
 function HomeScreen() {
@@ -60,7 +61,7 @@ function BottomTabs() {
                     headerShown: false,
                     tabBarIcon: ({ focused }) => (<AntDesign name="home" size={25} color={focused ? "#30708C" : "lightblue"} />)
                 }} />
-            <Tab.Screen name="Appoinment" component={TopTabs}
+            <Tab.Screen name="Appoinment" component={AppointmentsList}
                 options={{
                     headerShown: false,
                     tabBarIcon: ({ focused }) => (<Ionicons name="ios-shield-checkmark-outline" size={25} color={focused ? "#30708C" : "lightblue"} />)

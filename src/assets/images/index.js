@@ -11,5 +11,5 @@ export const healthIcon = require('./healthIcon.png')
 export const profile = require('./profile.png')
 export const chat = require('./chat.png')
 export const whtsapp = require('./whtsapp.png')
-
-
+export const mobileIcon = require('./mobileIcon.png')
+export const calendarIcon = require('./CalendarIcon.png')

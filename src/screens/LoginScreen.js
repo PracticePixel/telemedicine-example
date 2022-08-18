@@ -1,7 +1,5 @@
 import { StyleSheet, Text, View, TextInput, Dimensions, TouchableOpacity, Image } from 'react-native';
-import React, { useEffect, useState } from 'react';
-const DEVICE_WIDTH = Dimensions.get('window').width;
-const DEVICE_HEIGHT = Dimensions.get('window').height;
+import React, { useEffect, useState, useContext } from 'react';
 import AntDesign from 'react-native-vector-icons/AntDesign';
 import Ionicons from 'react-native-vector-icons/Ionicons';
 import Entypo from 'react-native-vector-icons/Entypo';
@@ -10,55 +8,21 @@ import SwitchToggle from 'react-native-switch-toggle';
 import { vw } from '../utility/viewport-units';
 import { wave } from '../assets/images';
 import { theme } from '../components/Common';
-import { signIn } from '../services/appointment';
-import SanarRTC, { SanarTelemedicine } from "react-native-sanar-telemedicine-rc";
+import Context from "../Store/Context";
+
 
 const LoginScreen = ({ props }) => {
+  const { loginUser } = useContext(Context);
   const navigation = useNavigation();
   const [status, setStatus] = useState(false)
   const [passwordVisible, setPasswordVisible] = useState(true);
-  const [userName, setUserName] = useState('7097951900')
-  const [password, setPassword] = useState('password')
-  // const [connect, setConnect] = useState(false);
+  const [userName, setUserName] = useState('')
+  const [password, setPassword] = useState('')
 
   const Login = async () => {
+    loginUser(true)
     navigation.navigate("BottomTabs")
-    // if (userName != '' || password != '') {
-    //   let obj = { pc: "91", ph: userName, pw: password }
-    //   const { response } = await signIn(obj)
-    //   if (response) {
-    //     setUserName('')
-    //     setPassword('')
-    //     await connectSanarSDK(response)
-    //     navigation.navigate("BottomTabs")
-    //   } else {
-    //     alert('Login failed')
-    //   }
-    //   console.log(response.personal.ln)
-    // } else {
-    //   alert('Please enter login details')
-    // }
   }
-
-  // const connectSanarSDK = (res) => {
-    // const userDetails = {
-    //   uid: res.personal.uid,
-    //   did: "abcdefg",
-    //   first_name: res.personal.fn,
-    //   last_name: res.personal.ln,
-    //   dob: res.personal.dob,
-    //   gender: res.personal.gnd,
-    //   nationality: res.personal.natio,
-    //   phone_code: res.personal.pc,
-    //   phone_no: res.personal.ph,
-    // }
-// const userDetails = { uid: "SMU6", did: "abcdefg", first_name: "Abdul", last_name: "Aziz", dob: "1994-08-13", gender: "M", nationality: "Saudi Arabia", mid: "786756", phone_code: "91", phone_no: "1234689", maritalStatus: "0", contract_no: "334488", document_id: "1039126857", document_type: 1, lang: "en" };
-
-//     SanarTelemedicine.Connect("client_id", userDetails)
-//       .then(response => {
-//         setConnect(response);
-//       }).catch(e => console.log(e));
-//   }
 
   const onChangeStatus = () => {
     setStatus(!status)
@@ -121,7 +85,6 @@ const LoginScreen = ({ props }) => {
           <Text style={{ color: "teal", fontSize: 18, fontFamily: theme.fontFamily.regular }}>Sign Up </Text>
         </View>
       </View>
-      {/* <SanarRTC enable={connect} /> */}
     </View>
   )
 }

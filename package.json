@@ -23,7 +23,7 @@
     "react": "17.0.1",
     "react-native": "0.64.1",
     "react-native-agora": "^3.7.0",
-    "react-native-device-info": "^9.0.2",
+    "react-native-device-info": "^10.0.2",
     "react-native-gesture-handler": "^2.4.2",
     "react-native-keyboard-aware-scroll-view": "^0.9.5",
     "react-native-pager-view": "^5.4.24",
